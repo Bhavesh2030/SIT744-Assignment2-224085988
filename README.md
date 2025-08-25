@@ -9,6 +9,13 @@ This repository contains:
 **Report:** [`HD_report.pdf`](HD%20report.pdf)
 
 ---
+## Data
+
+**MIT-BIH (AAMI N/S/V)**
+- Expected file: `MIT-BIH Arrhythmia Database.csv`.
+- Put it in the **repo root** (same folder as the notebook), **or** create a `data/` folder and set:
+  ```python
+  CSV_PATH = "data/MIT-BIH Arrhythmia Database.csv"
 
 ## Quick start
 
