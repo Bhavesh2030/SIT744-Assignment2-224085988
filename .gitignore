@@ -205,3 +205,42 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ---- Project-specific ignores (data, logs, checkpoints) ----
+
+# Keep data out of version control
+data/
+!data/.gitkeep                 # allow the empty folder
+!data/sample_mitbih.csv        # allow a tiny smoke-test CSV
+
+# If someone drops the full CSV at repo root, still ignore it
+MIT-BIH Arrhythmia Database.csv
+
+# Torchvision/Kaggle/common dataset dumps
+data/cifar-10-batches-py/
+cifar-10-batches-py/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+kaggle.json                    # Kaggle API token (never commit)
+
+# Training artifacts
+runs/                          # TensorBoard
+lightning_logs/
+wandb/
+checkpoints/
+outputs/
+artifacts/
+*.pt
+*.pth
+*.ckpt
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+
+# Jupyter autosaves/exports
+*.ipynb_autosave
+*.nbconvert.ipynb
